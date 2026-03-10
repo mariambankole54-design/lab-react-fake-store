@@ -27,6 +27,8 @@ function ProductListPage() {
 
       {products.map((product) => (
         <div key={product.id} style={{ marginBottom: "20px" }}>
+          <Link to={`/product/details/${product.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+          </Link>
           <h3>{product.title}</h3>
           <img src={product.image} alt={product.title} width="100" />
           <p>${product.price}</p>
